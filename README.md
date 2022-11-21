@@ -44,3 +44,15 @@ npm run build
 ```sh
 npm run lint
 ```
+
+
+
+## 技术栈
+
+ - [Vue.js](https://cn.vuejs.org/)
+ - [svg2geojson](https://github.com/Phrogz/svg2geojson)
+ - [Apache ECharts](https://echarts.apache.org/zh/index.html)
+ - [Vue-ECharts](https://github.com/ecomfe/vue-echarts/blob/main/README.zh-Hans.md)
+ - [DataV](http://datav.jiaminghi.com/)
+ - [axios](https://axios-http.com/)
+ - [Element Plus](http://element-plus.org/zh-CN/)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1336.29 902.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g name="basemap">
+    <polygon name="upleft" class="cls-1" points=".5 .5 .5 640.7 345.6 641.2 345.6 .5 132.69 .5 .5 .5"/>
+    <rect name="b" class="cls-1" x=".5" y="640.7" width="1335.29" height="261.76"/>
+    <rect name="upright" class="cls-1" x="345.6" y=".5" width="990.2" height="640.7"/>
+  </g>
+  <g name="pointsgroup">
+    <path name="point1" class="cls-1" d="M94.1,64.85c0,7.17-2.91,13.67-7.61,18.37s-11.2,7.61-18.37,7.61c-5.95,0-11.44-2-15.82-5.37-6.18-4.75-10.16-12.22-10.16-20.61,0-7.17,2.91-13.67,7.61-18.37s11.2-7.61,18.37-7.61,13.67,2.91,18.37,7.61c1.18,1.18,2.24,2.46,3.17,3.85,2.8,4.15,4.44,9.15,4.44,14.53Z"/>
+  </g>
+</svg>
