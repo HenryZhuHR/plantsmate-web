@@ -47,7 +47,7 @@ const props = defineProps({
 // 如果不是计算属性，就不会更新？
 const temperatureOption = computed(() => {
     var label = props.data.map((item) => {
-        return item.date
+        return item.time
     })
     var minTemperature = 99; //new Number(99)
     var maxTemperature = -99;
@@ -62,11 +62,13 @@ const temperatureOption = computed(() => {
     })
 
     return {
-        title: { text: '温度数据' + ' 设备编号(' + props.device + ')' },
+        // title: { text: '温度数据' + ' 设备编号(' + props.device + ')' },
         tooltip: {},
         grid: { // https://www.jianshu.com/p/b07695eec257
-            top: '15%',
-            bottom: '10%'
+            top: '20%',
+            bottom: '20%',
+            left: '20%',
+            right: '20%'
         },
         xAxis: {
             data: label,
@@ -80,8 +82,8 @@ const temperatureOption = computed(() => {
                 }
 
             },
-            min: minTemperature - minTemperature*0.1,
-            max: maxTemperature + maxTemperature*0.1,
+            min: minTemperature - Math.abs(minTemperature) * 0.1,
+            max: maxTemperature + Math.abs(maxTemperature) * 0.1,
         },
         series: [
             // {
@@ -125,16 +127,33 @@ onMounted(() => {
 
 
 <template>
-    <div>图表: {{ props.device }}</div>
-    <div class="chart-container">
-        <v-chart class="chart" :option="temperatureOption" theme="customTheme" />
+    <div class="container">
+        <div>温度变化</div>
+        <div>设备编号: {{ props.device }}</div>
+        <div class="chart-container">
+            <v-chart class="chart" :option="temperatureOption" ref="chart" theme="customTheme"
+                style="width: 100%;height:100%;" />
+        </div>
     </div>
+
 </template>
 
-<style>
+<style scoped>
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .chart-container {
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
     width: 100%;
     /* background-color: rgb(0, 0, 0); */
+}
+
+canvas {
+    width: 100% !important;
 }
 </style>

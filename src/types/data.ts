@@ -1,8 +1,8 @@
 /**
  * 植物状态数据
- * @tutorial 从后端接收到的数据类型
+ * @remarks 从后端接收到的数据类型
  */
- export interface PlantStatusData {
+export interface PlantStatusData {
     /**
      * 日期
      */
